@@ -1,0 +1,22 @@
+{
+  "type": "script",
+  "enabled": true,
+  "name": "《道渊》百艺修习面板（远程）",
+  "id": "2e0ce1fd-d61e-438d-8b40-fca1b3c9df2e",
+  "content": "import('https://cdn.jsdelivr.net/gh/fanfan0309/daoyuan-baiyi-panel@main/index.js').catch(error => console.error('[道渊百艺] 远程面板加载失败：', error));",
+  "info": "远程加载《道渊》百艺修习面板。源码：https://github.com/fanfan0309/daoyuan-baiyi-panel 。要求 Tavern Helper 支持脚本模块 import。",
+  "button": {
+    "enabled": true,
+    "buttons": [
+      {
+        "name": "百艺面板",
+        "visible": true
+      }
+    ]
+  },
+  "data": {},
+  "export_with": {
+    "data": true,
+    "button": true
+  }
+}
