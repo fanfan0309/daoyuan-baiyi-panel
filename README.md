@@ -2,6 +2,8 @@
 
 这是《道渊》工坊 DLC 的 Tavern Helper 面板脚本独立托管仓库。角色卡内容（世界书与正则）不在此仓库。
 
+[查看更新日志](CHANGELOG.md)
+
 ## Tavern Helper 远程导入
 
 在 Tavern Helper 脚本管理中导入仓库中的 `TavernHelper-远程导入.json`。该入口使用动态 `import()` 从 jsDelivr 读取 `index.js`：
