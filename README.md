@@ -4,22 +4,26 @@
 
 ## 当前版本
 
-当前面板脚本为 **v0.3.2**。本版内容见 [发布说明](发布说明-v0.3.2.md)，版本变化见 [更新日志](CHANGELOG.md)。
+当前面板脚本为 **v0.3.3 修复版**，修复点击按钮无反应、悬浮面板加载失败及场景底图缺失。版本变化和更新方法见 [更新日志](CHANGELOG.md)，原 v0.3.2 功能介绍见 [发布说明](发布说明-v0.3.2.md)。
 
 ## Tavern Helper 远程导入
 
 在 Tavern Helper 脚本管理中导入仓库里的 `TavernHelper-远程导入.json`。入口会从 jsDelivr 动态读取本仓库的 `index.js`：
 
-`https://cdn.jsdelivr.net/gh/fanfan0309/daoyuan-baiyi-panel@main/index.js`
+`https://cdn.jsdelivr.net/gh/fanfan0309/daoyuan-baiyi-panel@v0.3.3/index.js`
 
 也可以在酒馆助手脚本中使用：
 
 ```js
-import('https://cdn.jsdelivr.net/gh/fanfan0309/daoyuan-baiyi-panel@main/index.js')
+import('https://cdn.jsdelivr.net/gh/fanfan0309/daoyuan-baiyi-panel@v0.3.3/index.js')
   .catch(error => console.error('[道渊百艺] 远程面板加载失败：', error));
 ```
 
 面板操作只会将制作或委托请求整理到输入栏草稿，由玩家自行检查和发送。丹药、炼器与储物袋字段只读原卡；新增技艺状态由本组件单独记录。
+
+导入 JSON 已包含「百艺面板」按钮；如果手动粘贴上述代码，请自行添加同名脚本按钮。面板以页面悬浮窗打开，打开操作不会新增聊天楼层。
+
+已使用远程入口的玩家，请重新导入此 JSON 或将地址中的 `@main` 改为 `@v0.3.3` 后重载脚本。保留一份启用的百艺脚本，避免本地版与远程版重复启用；本次修复无需重新导入世界书和正则。
 
 ## 导入次序
 
@@ -30,6 +34,6 @@ import('https://cdn.jsdelivr.net/gh/fanfan0309/daoyuan-baiyi-panel@main/index.js
 
 ## 兼容要求与状态
 
-需要支持 ES 模块动态 `import()`、消息渲染器、脚本按钮、聊天变量和 `MESSAGE_RECEIVED` 事件的 Tavern Helper 版本。本版已通过本地构建和静态结构检查；真实工坊导入和实际酒馆运行仍需使用者在副本中验收。
+需要支持 ES 模块动态 `import()`、脚本按钮、聊天变量和 `MESSAGE_RECEIVED` 事件的 Tavern Helper 版本。v0.3.3 已通过浏览器加载检查，作者已在实际酒馆确认本地修复脚本的悬浮窗及底图正常；远程版使用相同脚本内容。其他环境兼容性和全部玩法流程尚未全面验收。
 
 本仓库暂未附加开源许可证；公开可见不等于已授予再分发或改作许可。
