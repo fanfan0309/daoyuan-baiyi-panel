@@ -4,18 +4,18 @@
 
 ## 当前版本
 
-当前面板脚本为 **v0.3.4 手机适配版**。本版支持手机窄屏与横屏，保留悬浮窗边距、九门场景和竖向滚动；并包含 v0.3.3 的按钮、脚本加载和场景底图修复。版本变化和更新方法见 [更新日志](CHANGELOG.md)，原 v0.3.2 功能介绍见 [发布说明](发布说明-v0.3.2.md)。
+当前面板脚本为 **v0.3.5 手机适配版**。本版支持手机窄屏与横屏，并将工位选择标注改为横向排列、自动换行，减少场景内遮挡；保留悬浮窗边距、九门场景和竖向滚动，也包含 v0.3.3 的按钮、脚本加载和场景底图修复。版本变化和更新方法见 [更新日志](CHANGELOG.md)，原 v0.3.2 功能介绍见 [发布说明](发布说明-v0.3.2.md)。
 
 ## Tavern Helper 远程导入
 
 在 Tavern Helper 脚本管理中导入仓库里的 `TavernHelper-远程导入.json`。入口会从 jsDelivr 动态读取本仓库的 `index.js`：
 
-`https://cdn.jsdelivr.net/gh/fanfan0309/daoyuan-baiyi-panel@v0.3.4/index.js`
+`https://cdn.jsdelivr.net/gh/fanfan0309/daoyuan-baiyi-panel@v0.3.5/index.js`
 
 也可以在酒馆助手脚本中使用：
 
 ```js
-import('https://cdn.jsdelivr.net/gh/fanfan0309/daoyuan-baiyi-panel@v0.3.4/index.js')
+import('https://cdn.jsdelivr.net/gh/fanfan0309/daoyuan-baiyi-panel@v0.3.5/index.js')
   .catch(error => console.error('[道渊百艺] 远程面板加载失败：', error));
 ```
 
@@ -23,7 +23,7 @@ import('https://cdn.jsdelivr.net/gh/fanfan0309/daoyuan-baiyi-panel@v0.3.4/index.
 
 导入 JSON 已包含「百艺面板」按钮；如果手动粘贴上述代码，请自行添加同名脚本按钮。面板以页面悬浮窗打开，打开操作不会新增聊天楼层。
 
-已使用远程入口的玩家，请重新导入此 JSON 或将地址中的版本改为 `@v0.3.4` 后重载脚本。保留一份启用的百艺脚本，避免本地版与远程版重复启用；本次更新无需重新导入世界书和正则。
+已使用远程入口的玩家，请重新导入此 JSON 或将地址中的版本改为 `@v0.3.5` 后重载脚本。保留一份启用的百艺脚本，避免本地版与远程版重复启用；本次更新无需重新导入世界书和正则。
 
 ## 导入次序
 
