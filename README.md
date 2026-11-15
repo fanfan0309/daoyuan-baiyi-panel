@@ -4,20 +4,20 @@
 
 ## 当前版本
 
-当前面板脚本为 **v0.3.6**。本版扩充炼丹与炼器的工坊操作：加入药材辨识、药材图鉴，器物材料辨识、器物图鉴与独立器灵页；补全玉佩专属工序，并保留炼丹配方、炼器目标及工序选择。场景操作结果会整理成输入栏草稿，玩家检查后自行发送。面板按钮打开悬浮窗，不创建新的聊天楼层，也不会自动发送消息。
+当前面板脚本为 **v0.3.7**。本版将场景图片作为公开资源托管在仓库的 `assets/panel/`，脚本按固定版本地址加载图片，避免把全部图片塞进脚本正文而触发工坊单字段限制。炼丹与炼器操作内容沿用 v0.3.6：包含药材辨识、药材图鉴、器物材料辨识、器物图鉴、独立器灵页及玉佩专属工序。场景操作结果会整理成输入栏草稿，玩家检查后自行发送。面板按钮打开悬浮窗，不创建新的聊天楼层，也不会自动发送消息。打开场景时需要网络访问 jsDelivr 图片资源。
 
-本仓库不包含世界书与正则。本版配套世界书和正则要从 DLC 独立导入包获取；只更新面板脚本时，无需重复导入它们。
+本仓库不包含世界书与正则。本版配套世界书和正则要从 DLC 独立导入包获取；只更新面板脚本时，无需重复导入它们。图片资源随本仓库的版本标签托管；请使用固定版本链接，不要删除当前版本的 `assets/panel/` 文件。
 
 ## Tavern Helper 远程导入
 
-在 Tavern Helper 脚本管理中导入仓库里的 `TavernHelper-远程导入.json`。入口固定读取本仓库的 v0.3.6 `index.js`：
+在 Tavern Helper 脚本管理中导入仓库里的 `TavernHelper-远程导入.json`。入口固定读取本仓库的 v0.3.7 `index.js`：
 
-`https://cdn.jsdelivr.net/gh/fanfan0309/daoyuan-baiyi-panel@v0.3.6/index.js`
+`https://cdn.jsdelivr.net/gh/fanfan0309/daoyuan-baiyi-panel@v0.3.7/index.js`
 
 也可以在酒馆助手脚本中使用：
 
 ```js
-import('https://cdn.jsdelivr.net/gh/fanfan0309/daoyuan-baiyi-panel@v0.3.6/index.js')
+import('https://cdn.jsdelivr.net/gh/fanfan0309/daoyuan-baiyi-panel@v0.3.7/index.js')
   .catch(error => console.error('[道渊百艺] 远程面板加载失败：', error));
 ```
 
@@ -25,7 +25,7 @@ import('https://cdn.jsdelivr.net/gh/fanfan0309/daoyuan-baiyi-panel@v0.3.6/index.
 
 ## 更新日志与验收
 
-版本变化见 [更新日志](CHANGELOG.md)。本版源文件已通过本地构建和脚本语法检查。真实酒馆、实际工坊草稿导入和实体手机尚未完成 v0.3.6 验收；面板模拟预览不能代替这些检查。
+版本变化见 [更新日志](CHANGELOG.md)。v0.3.7 已通过本地构建、脚本正文长度检查和链接清单核对。真实酒馆、实际工坊草稿导入和实体手机尚未完成 v0.3.7 验收；面板模拟预览不能代替这些检查。
 
 ## 导入次序
 
